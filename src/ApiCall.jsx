@@ -3,8 +3,6 @@ export default class ApiCall extends Component {
 
     state = {
         city: null,
-        api1: "ae318d3ec0684490a06172549231411",
-        api2: "b257f6f627de492c940beb105ebad254",
         days: 1,
         arrElement: 0,
         allData: null,
@@ -22,7 +20,8 @@ export default class ApiCall extends Component {
     citySubmit = (event) => {
         console.log(this.state.city);
         const data = async () => {
-            const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=${this.state.api1}&q=${this.state.city}&aqi=no`)
+            // const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=${this.state.api1}&q=${this.state.city}&aqi=no`)
+            const response = await fetch(`http://api.weatherapi.com/v1/current.json?key=${process.env.REACT_APP_API_KEY}&q=${this.state.city}&aqi=no`)    
             const data = await response.json();
             console.log(data);
             this.setState({
