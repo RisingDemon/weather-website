@@ -42,7 +42,7 @@ export default class ApiCall extends Component {
     futureWeather = () => {
         console.log(this.state.city);
         const data = async () => {
-            const response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=${this.state.api1}&q=${this.state.city}&days=${this.state.days}&aqi=no&alerts=no`)
+            const response = await fetch(`http://api.weatherapi.com/v1/forecast.json?key=${process.env.REACT_APP_API_KEY}&q=${this.state.city}&days=${this.state.days}&aqi=no&alerts=no`)
             const data = await response.json();
             console.log(data);
             console.log(this.state.arrElement);
