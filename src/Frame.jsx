@@ -43,7 +43,7 @@ export default class Frame extends Component {
             style={{
               textDecoration: "none",
             }}
-            href="/favourites"
+            href="/#/favourites"
           >
             {/* <i style={{color:"white", fontSize:19}} className="fa-solid fa-heart"></i> */}
             <iconify-icon style={{color:"white", fontSize:30}} icon="el:heart-alt"></iconify-icon>

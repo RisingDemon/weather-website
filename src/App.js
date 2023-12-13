@@ -8,7 +8,7 @@ import GoogleMapReact from "google-map-react";
 import MapTrial from "./MapTrial";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Favourites from "./Favourites";
-
+import { HashRouter } from "react-router-dom";
 // const WeatherMap = () => {
 //   const API_KEY = 'XjeyuBDEfKOkp4TAhvZgjuVzbnsxbeLE';
 //   const DATA_FIELD = 'precipitationIntensity';
@@ -59,12 +59,14 @@ import Favourites from "./Favourites";
 function App() {
   return (
     // <Router>
+    // <HashRouter>
       <div className="App">
         <Routes>
           <Route exact path="/" element={<div><Frame/><ApiCall /></div>}></Route>
-          <Route exact path="/favourites" element={<div><Frame/><Favourites /></div>}></Route>
+          <Route path="/favourites" element={<div><Frame/><Favourites /></div>}></Route>
         </Routes>
       </div>
+    // </HashRouter>
     // </Router>
 
     // <div>
