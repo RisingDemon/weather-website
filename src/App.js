@@ -58,14 +58,14 @@ import Favourites from "./Favourites";
 
 function App() {
   return (
-    <Router>
+    // <Router>
       <div className="App">
         <Routes>
           <Route exact path="/" element={<div><Frame/><ApiCall /></div>}></Route>
           <Route exact path="/favourites" element={<div><Frame/><Favourites /></div>}></Route>
         </Routes>
       </div>
-    </Router>
+    // </Router>
 
     // <div>
     // <Frame/>
