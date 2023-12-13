@@ -1,12 +1,13 @@
 // import logo from './logo.svg';
-import './App.css';
-import ApiCall from './ApiCall';
-import Frame from './Frame';
-import MapIntegrate from './MapIntegrate';
-import { withGoogleMap, GoogleMap, OverlayView } from 'google-map-react';
-import GoogleMapReact from 'google-map-react';
-import MapTrial from './MapTrial';
-
+import "./App.css";
+import ApiCall from "./ApiCall";
+import Frame from "./Frame";
+import MapIntegrate from "./MapIntegrate";
+import { withGoogleMap, GoogleMap, OverlayView } from "google-map-react";
+import GoogleMapReact from "google-map-react";
+import MapTrial from "./MapTrial";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import Favourites from "./Favourites";
 
 // const WeatherMap = () => {
 //   const API_KEY = 'XjeyuBDEfKOkp4TAhvZgjuVzbnsxbeLE';
@@ -55,15 +56,23 @@ import MapTrial from './MapTrial';
 //   );
 // };
 
-
 function App() {
   return (
-    <div>
-    <Frame/>
-    <ApiCall />
-    {/* <WeatherMap/> */}
-    {/* <MapTrial/> */}
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route exact path="/" element={<div><Frame/><ApiCall /></div>}></Route>
+          <Route exact path="/favourites" element={<div><Frame/><Favourites /></div>}></Route>
+        </Routes>
+      </div>
+    </Router>
+
+    // <div>
+    // <Frame/>
+    // <ApiCall />
+    // {/* <WeatherMap/> */}
+    // {/* <MapTrial/> */}
+    // </div>
   );
 }
 
