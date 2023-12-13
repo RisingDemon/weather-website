@@ -42,28 +42,28 @@ export default class ApiCall extends Component {
         visibility: data.current.vis_km,
         precipitation: data.current.precip_mm,
       });
-    //   check if the city is already in the local storage
-        if (localStorage.getItem("cityArr") !== null) {
-            console.log("cityArr exists");
-            let cityArr = localStorage.getItem("cityArr");
-            cityArr = JSON.parse(cityArr);
-            console.log(cityArr);
-            for (let i = 0; i < cityArr.length; i++) {
-            if (cityArr[i] === this.state.city) {
-                console.log("city already exists");
-                console.log(this.state.favourite);
-                this.setState({
-                    favourite: true,
-                });
-                return;
-            }
-            else{
-                this.setState({
-                    favourite: false,
-                });
-            }
-            }
+      //   check if the city is already in the local storage
+      if (localStorage.getItem("cityArr") !== null) {
+        console.log("cityArr exists");
+        let cityArr = localStorage.getItem("cityArr");
+        cityArr = JSON.parse(cityArr);
+        console.log(cityArr);
+        for (let i = 0; i < cityArr.length; i++) {
+          if (cityArr[i] === this.state.city) {
+            console.log("city already exists");
+            console.log(this.state.favourite);
+            this.setState({
+              favourite: true,
+            });
+            console.log(this.state.favourite);
+            return;
+          } else {
+            this.setState({
+              favourite: false,
+            });
+          }
         }
+      }
     };
     data();
   };
@@ -248,33 +248,38 @@ export default class ApiCall extends Component {
       cityArr = JSON.parse(cityArr);
       console.log(cityArr);
       console.log(this.state.favourite);
-    //   check if the city is already in the local storage
-        for (let i = 0; i < cityArr.length; i++) {
-            if (cityArr[i] === this.state.city) {
-            console.log("city already exists");
-            cityArr.splice(i, 1);
-            console.log(cityArr);
-            localStorage.setItem("cityArr", JSON.stringify(cityArr));
-            this.setState({
-                favourite: false,
-            });
-            return;
-            }
-            else{
-                this.setState({
-                    favourite: true,
-                });
-            }
+      //   check if the city is already in the local storage
+      if (cityArr.length === 0) {
+        this.setState({
+          favourite: true,
+        });
+      }
+      for (let i = 0; i < cityArr.length; i++) {
+        if (cityArr[i] === this.state.city) {
+          console.log("city already exists");
+          cityArr.splice(i, 1);
+          console.log(cityArr);
+          localStorage.setItem("cityArr", JSON.stringify(cityArr));
+          this.setState({
+            favourite: false,
+          });
+          return;
+        } else {
+          console.log("city does not exist");
+          this.setState({
+            favourite: true,
+          });
         }
+      }
+      console.log(this.state.favourite);
       cityArr.push(this.state.city);
       console.log(cityArr);
       localStorage.setItem("cityArr", JSON.stringify(cityArr));
     } else {
       console.log("cityArr does not exist");
-      let cityArr = [];
-      cityArr.push(this.state.city);
-      console.log(cityArr);
-      localStorage.setItem("cityArr", JSON.stringify(cityArr));
+      this.setState({
+        favourite: true,
+      });
     }
   };
 
@@ -326,7 +331,11 @@ export default class ApiCall extends Component {
                 marginTop: 10,
               }}
             >
-                {this.state.favourite ? (<i className="fa-solid fa-heart"></i>):(<i className="fa-regular fa-heart"></i>)}
+              {this.state.favourite ? (
+                <i className="fa-solid fa-heart"></i>
+              ) : (
+                <i className="fa-regular fa-heart"></i>
+              )}
               {/* <i className="fa-regular fa-heart"></i> */}
             </button>
 
