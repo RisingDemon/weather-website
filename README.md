@@ -1,6 +1,7 @@
 # weather-website
 
 Visit the below url to checkout live working of the site
+
 [https://weatherapp-6off.onrender.com/](https://weatherapp-6off.onrender.com/)
 
 # Technical details
