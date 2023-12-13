@@ -277,6 +277,9 @@ export default class ApiCall extends Component {
       localStorage.setItem("cityArr", JSON.stringify(cityArr));
     } else {
       console.log("cityArr does not exist");
+      let cityArr = [];
+      cityArr.push(this.state.city);
+      localStorage.setItem("cityArr", JSON.stringify(cityArr));
       this.setState({
         favourite: true,
       });
