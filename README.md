@@ -1,6 +1,18 @@
-# Getting Started with Create React App
+# weather-website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Visit the below url to checkout live working of the site
+[https://weatherapp-6off.onrender.com/](https://weatherapp-6off.onrender.com/)
+
+# Technical details
+
+* Build using ReactJs
+
+# Features
+
+* Location Based Weather
+* Current Weather details
+* Weather Forecast
+* Multiple locations
 
 ## Available Scripts
 
@@ -17,56 +29,30 @@ You may also see any lint errors in the console.
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Screenshots
 
-### `npm run eject`
+* Homepage
+![homePage](https://github.com/RisingDemon/weather-website/assets/85939640/1d49e38d-c261-47b5-ae31-6c89b1d241f9)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* City demo
+![withCity](https://github.com/RisingDemon/weather-website/assets/85939640/1ee127c1-5705-478b-8212-3e662965c8d4)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+* Forecast
+![forecast](https://github.com/RisingDemon/weather-website/assets/85939640/5473af39-3e21-4fed-bb92-fbc0469e009a)
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* Detailed forecast
+![detailedForecast](https://github.com/RisingDemon/weather-website/assets/85939640/8c2ce80a-5d33-4171-ab6e-fa358cb04be0)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+* Favourites
+![Favourites](https://github.com/RisingDemon/weather-website/assets/85939640/8aa7d6fc-1c34-4744-a4a6-05dfda8fa39d)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# weather-website
-[https://weatherapp-6off.onrender.com/](https://weatherapp-6off.onrender.com/)
